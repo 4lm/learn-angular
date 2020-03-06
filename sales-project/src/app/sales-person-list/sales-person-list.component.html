@@ -2,27 +2,27 @@
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
   <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
 
-  <!-- Position Column -->
+  <!-- First Name Column -->
   <ng-container matColumnDef="firstName">
-    <mat-header-cell *matHeaderCellDef> First Name </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef>First Name</mat-header-cell>
     <mat-cell *matCellDef="let element"> {{ element.firstName }} </mat-cell>
   </ng-container>
 
-  <!-- Name Column -->
+  <!-- Last Name Column -->
   <ng-container matColumnDef="lastName">
-    <mat-header-cell *matHeaderCellDef> Last Name </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef>Last Name</mat-header-cell>
     <mat-cell *matCellDef="let element"> {{ element.lastName }} </mat-cell>
   </ng-container>
 
-  <!-- Weight Column -->
+  <!-- Email Column -->
   <ng-container matColumnDef="email">
-    <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef>Email</mat-header-cell>
     <mat-cell *matCellDef="let element"> {{ element.email }} </mat-cell>
   </ng-container>
 
-  <!-- Symbol Column -->
+  <!-- Sales Volume Column -->
   <ng-container matColumnDef="salesVolume">
-    <mat-header-cell *matHeaderCellDef> Sales Volume </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef>Sales Volume</mat-header-cell>
     <mat-cell *matCellDef="let element"> {{ element.salesVolume }} </mat-cell>
   </ng-container>
 </mat-table>
