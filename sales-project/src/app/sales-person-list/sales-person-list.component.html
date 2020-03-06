@@ -1,18 +1,28 @@
-<table border="1">
-  <thead>
-    <tr>
-      <td>First Name</td>
-      <td>Last Name</td>
-      <td>Email</td>
-      <td>Sales Volume</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let salesPerson of salesPersonList">
-      <td>{{ salesPerson.firstName }}</td>
-      <td>{{ salesPerson.lastName }}</td>
-      <td>{{ salesPerson.email }}</td>
-      <td>{{ salesPerson.salesVolume }}</td>
-    </tr>
-  </tbody>
-</table>
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="firstName">
+    <mat-header-cell *matHeaderCellDef> First Name </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{ element.firstName }} </mat-cell>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="lastName">
+    <mat-header-cell *matHeaderCellDef> Last Name </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{ element.lastName }} </mat-cell>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="email">
+    <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{ element.email }} </mat-cell>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="salesVolume">
+    <mat-header-cell *matHeaderCellDef> Sales Volume </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{ element.salesVolume }} </mat-cell>
+  </ng-container>
+</mat-table>
